@@ -3,7 +3,7 @@
 A somewhat successful attempt at implementing point-free notation in Javascript using proxies. It works perfectly for regular functions, but somehow fails for higher order ones.
 
 Example usage:
-```
+```javascript
 let p = pfree (global) (x => x)
 
 // You can define things in point-free notation inside this with block
@@ -17,7 +17,7 @@ console.log(five) // 5
 ```
 
 Does not work properly for higher order functions (this might change one day):
-```
+```javascript
 with (p) {
   flip  = f => x => y => f (y) (x)
   Const = a => b => a
