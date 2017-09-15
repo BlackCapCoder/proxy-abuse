@@ -38,4 +38,4 @@ with (p) {
 
 # Do not!
 
-Use this in production code. Even if I eventually fix it for higher order function, it is abuse of the Javascript language and against all conventions- your co-workers will hate you.
+Use this in production code. Even if I eventually fix higher order functions, it is abuse of the Javascript language and against all conventions- your co-workers will hate you.
