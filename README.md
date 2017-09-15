@@ -18,6 +18,7 @@ console.log(five) // 5
 
 Does not work properly for higher order functions (this might change one day):
 ```javascript
+// Church encoding
 with (p) {
   flip  = f => x => y => f (y) (x)
   Const = a => b => a
@@ -27,7 +28,8 @@ with (p) {
   zero  = flip (Const)
   succ  = ap (dot)
 
-  num   = n => n (x => x + 1) (0) // The number n is represented by running a function n times over some input
+  // The number n is represented by running a function n times over some input
+  num   = n => n (x => x + 1) (0)
 
   console.log ( num ( succ ( succ ( succ (zero) )))) // 3
   console.log ( num . succ . succ . succ (zero) )    // [Function]
